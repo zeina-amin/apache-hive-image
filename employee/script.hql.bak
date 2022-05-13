@@ -1,0 +1,16 @@
+use assign1_zeina;
+drop table if exists test;
+create table if not exists test (
+  eid int,
+  ename string,
+  age int,
+  jobtype string,
+  storeid int,
+  storelocation string,
+  salary bigint,
+  yrsofexp int
+)
+row format delimited
+fields terminated by ','
+lines terminated by '\n'
+stored as textfile location 'hdfs://namenode:8020/user/hive/warehouse/assign1_zeina.db/test';
